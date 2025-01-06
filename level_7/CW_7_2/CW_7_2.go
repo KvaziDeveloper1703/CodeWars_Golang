@@ -1,13 +1,15 @@
 /*
-Trolls are attacking your comment section!
+Write a function that takes a string as input and returns a new string with all vowels removed. For this task, vowels are defined as a, e, i, o, u and y.
 
-A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+For example:
+Input: "This website is for losers LOL!"
+Output: "Ths wbst s fr lsrs LL!"
 
-Your task is to write a function that takes a string and return a new string with all vowels removed.
+Напишите функцию, которая принимает строку и возвращает новую строку с удалёнными гласными. В рамках задачи гласными считаются a, e, i, o, u и y.
 
-For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
-
-Note: for this kata y isn't considered a vowel.
+Например:
+Ввод: "This website is for losers LOL!"
+Вывод: "Ths wbst s fr lsrs LL!"
 
 https://www.codewars.com/kata/52fba66badcd10859f00097e
 */
@@ -19,7 +21,7 @@ import (
 )
 
 func removeVowels(input string) string {
-	vowels := "aeiouAEIOU"
+	vowels := "aeiouyAEIOUY"
 	result := ""
 
 	for _, char := range input {
