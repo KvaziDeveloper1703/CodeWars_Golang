@@ -1,27 +1,63 @@
 /*
-Write a function first_non_repeating_letter that takes a string as input and returns the first character that does not repeat anywhere in the string.
+Write a function to sort a string of numbers by their "weight," where the weight is the sum of the digits.
 
 Rules:
-Upper- and lowercase letters are treated as the same character, but the function should return the character in its original case.
-If all characters in the string are repeated, return an empty string ("").
-The function should handle any Unicode characters.
++ Sort numbers by their "weight" (sum of digits).
++ If weights are equal, sort them as strings alphabetically.
 
-Examples:
-Input: 'stress' → Output: 't' (only 't' is non-repeating)
-Input: 'sTreSS' → Output: 'T' ('T' is non-repeating, preserving its case)
-Input: 'aabbcc' → Output: "" (all characters are repeated)
+Example:
+Input: "56 65 74 100 99 68 86 180 90"
+Output: "100 180 90 56 65 74 68 86 99"
 
-Напишите функцию first_non_repeating_letter, которая принимает строку и возвращает первый символ, который нигде в строке не повторяется.
+Напишите функцию для сортировки строки с числами по их "весу", где вес — это сумма цифр числа.
 
 Правила:
-Заглавные и строчные буквы считаются одним и тем же символом, но функция должна возвращать символ в его исходном регистре.
-Если все символы в строке повторяются, вернуть пустую строку ("").
-Функция должна обрабатывать любые символы Юникода.
++ Сортировать числа по "весу" (сумме цифр).
++ При одинаковом весе сортировать как строки в алфавитном порядке.
 
-Примеры:
-Ввод: 'stress' → Вывод: 't' (только 't' не повторяется)
-Ввод: 'sTreSS' → Вывод: 'T' ('T' не повторяется, сохраняется регистр)
-Ввод: 'aabbcc' → Вывод: "" (все символы повторяются)
+Пример:
+Ввод: "56 65 74 100 99 68 86 180 90"
+Вывод: "100 180 90 56 65 74 68 86 99"
 
-https://www.codewars.com/kata/52bc74d4ac05d0945d00054e
+https://www.codewars.com/kata/55c6126177c9441a570000cc
 */
+
+package main
+
+import (
+	"fmt"
+	"sort"
+	"strings"
+	"unicode"
+)
+
+func weight(number string) int {
+	sum := 0
+	for _, digit := range number {
+		if unicode.IsDigit(digit) {
+			sum += int(digit - '0')
+		}
+	}
+	return sum
+}
+
+func orderWeight(input string) string {
+	numbers := strings.Fields(input)
+
+	sort.SliceStable(numbers, func(i, j int) bool {
+		weightI := weight(numbers[i])
+		weightJ := weight(numbers[j])
+		if weightI == weightJ {
+			return numbers[i] < numbers[j]
+		}
+		return weightI < weightJ
+	})
+
+	return strings.Join(numbers, " ")
+}
+
+func main() {
+	input := "56 65 74 100 99 68 86 180 90"
+	output := orderWeight(input)
+	fmt.Println(output)
+}
