@@ -1,5 +1,7 @@
 /*
-Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+Write a function that takes a boolean value as input and returns the string "Yes" if the value is true, or "No" if the value is false.
+
+Напишите функцию, которая принимает логическое значение и возвращает строку "Yes", если значение равно true, или "No", если значение равно false.
 
 https://www.codewars.com/kata/53369039d7ab3ac506000467
 */

@@ -1,7 +1,15 @@
 /*
-Complete the square sum function so that it squares each number passed into it and then sums the results together.
+Write a function that takes an array of numbers, squares each number, and then returns the sum of the squared values.
 
-Example: [1,2,2] => 9
+For example:
+Input: [1, 2, 2] → Output: 9
+
+Напишите функцию, которая принимает массив чисел, возводит каждое число в квадрат и возвращает сумму квадратов.
+
+Например:
+Ввод: [1, 2, 2] → Вывод: 9
+
+https://www.codewars.com/kata/515e271a311df0350d00000f
 */
 
 package main

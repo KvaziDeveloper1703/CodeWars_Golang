@@ -1,5 +1,7 @@
 /*
-It's pretty straightforward. Your goal is to create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry about strings with less than two characters.
+Write a function that takes a string as input and removes its first and last characters. The input will always be a string with at least two characters.
+
+Напишите функцию, которая принимает строку и удаляет её первый и последний символы. Входная строка всегда содержит как минимум два символа.
 
 https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0
 */

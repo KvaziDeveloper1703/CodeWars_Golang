@@ -1,5 +1,7 @@
 /*
-In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+Write a function that takes a number as input and ensures it is negative. If the number is already negative, return it as is.
+
+Напишите функцию, которая принимает число и преобразует его в отрицательное. Если число уже отрицательное, просто верните его.
 
 https://www.codewars.com/kata/55685cd7ad70877c23000102
 */
@@ -16,7 +18,7 @@ func MakeNegative(x int) int {
 }
 
 func main() {
-	fmt.Println(MakeNegative(1))  // -1
-	fmt.Println(MakeNegative(-1)) // -1
-	fmt.Println(MakeNegative(0))  // 0
+	fmt.Println(MakeNegative(1))
+	fmt.Println(MakeNegative(-1))
+	fmt.Println(MakeNegative(0))
 }

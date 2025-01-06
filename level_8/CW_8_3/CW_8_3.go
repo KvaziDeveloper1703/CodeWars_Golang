@@ -1,7 +1,15 @@
 /*
-You get an array of numbers, return the sum of all of the positives ones.
+Write a function that takes an array of numbers as input and returns the sum of all positive numbers in the array.
 
-Example: [1,-4,7,12] => 20
+For example:
+Input: [1, -4, 7, 12]
+Output: 20
+
+Напишите функцию, которая принимает массив чисел и возвращает сумму всех положительных чисел в массиве.
+
+Например:
+Ввод: [1, -4, 7, 12]
+Вывод: 20
 
 https://www.codewars.com/kata/5715eaedb436cf5606000381
 */

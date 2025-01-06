@@ -1,7 +1,7 @@
 /*
-Write a function that takes two parameters: an integer repetitions and a string value. The function should return a new string that consists of the string value repeated exactly repetitions times.
+Write a function that takes two parameters: an integer n and a string s. The function should return a new string where the input string s is repeated exactly n times.
 
-Напиш ите функцию, которая принимает два параметра: целое число n и строку s. Функция должна возвращать новую строку, состоящую из строки s, повторённой ровно n раз.
+Напишите функцию, которая принимает два параметра: целое число n и строку s. Функция должна вернуть новую строку, в которой строка s повторяется ровно n раз.
 
 https://www.codewars.com/kata/57a0e5c372292dd76d000d7e
 */
@@ -13,11 +13,11 @@ import (
 	"strings"
 )
 
-func RepeatString(repetitions int, value string) string {
-	if repetitions <= 0 {
+func RepeatString(n int, s string) string {
+	if n <= 0 {
 		return ""
 	}
-	return strings.Repeat(value, repetitions)
+	return strings.Repeat(s, n)
 }
 
 func main() {

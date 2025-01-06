@@ -1,5 +1,7 @@
 /*
-Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+Write a program that takes an integer as input and returns "Even" if the number is even or "Odd" if the number is odd.
+
+Напишите программу, которая принимает целое число и возвращает "Even", если число чётное, или "Odd", если число нечётное.
 
 https://www.codewars.com/kata/53da3dbb4a5168369a0000fe
 */

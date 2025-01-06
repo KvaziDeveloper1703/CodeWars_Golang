@@ -1,8 +1,15 @@
 /*
-Complete the solution so that it reverses the string passed into it.
+Write a program that takes a string as input and returns the string reversed.
 
-'world'  =>  'dlrow'
-'word'   =>  'drow'
+For example:
+Input: 'world' → Output: 'dlrow'
+Input: 'word' → Output: 'drow'
+
+Напишите функцию, которая принимает строку и возвращает её в перевёрнутом виде.
+
+Например:
+Ввод: 'world' → Вывод: 'dlrow'
+Ввод: 'word' → Вывод: 'drow'
 
 https://www.codewars.com/kata/5168bb5dfe9a00b126000018
 */
@@ -14,7 +21,7 @@ import "fmt"
 func Solution(word string) string {
 	runes := []rune(word)
 	for i := 0; i < len(runes)/2; i++ {
-		runes[i], runes[len(runes)-1-i] = runes[len(runes)-1-i], runes[i]
+		runes[i], runes[len(runes)-i-1] = runes[len(runes)-i-1], runes[i]
 	}
 	return string(runes)
 }

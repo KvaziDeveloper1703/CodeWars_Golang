@@ -1,10 +1,18 @@
 /*
-We need a function that can transform a number (integer) into a string.
+Write a function that converts an integer into a string.
 
-Examples:
-123  --> "123"
-999  --> "999"
--100 --> "-100"
+For example:
+Input: 123 → Output: "123"
+Input: 999 → Output: "999"
+Input: -100 → Output: "-100"
+
+
+Напишите функцию, которая преобразует целое число в строку.
+
+Например:
+Ввод: 123 → Вывод: "123"
+Ввод: 999 → Вывод: "999"
+Ввод: -100 → Вывод: "-100"
 
 https://www.codewars.com/kata/5265326f5fda8eb1160004c8
 */
@@ -17,7 +25,7 @@ import (
 )
 
 func NumberToString(number int) string {
-	return strconv.Itoa(number)
+	return strconv.Itoa(number) // Integer to ASCII
 }
 
 func main() {
