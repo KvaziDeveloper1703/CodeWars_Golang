@@ -1,17 +1,27 @@
 /*
-Write a function dirReduc that takes an array of directions ("NORTH", "SOUTH", "EAST", "WEST") and simplifies the path by removing consecutive opposite directions ("NORTH" + "SOUTH" or "EAST" + "WEST").
+Write a function first_non_repeating_letter that takes a string as input and returns the first character that does not repeat anywhere in the string.
+
+Rules:
+Upper- and lowercase letters are treated as the same character, but the function should return the character in its original case.
+If all characters in the string are repeated, return an empty string ("").
+The function should handle any Unicode characters.
 
 Examples:
-["NORTH", "SOUTH", "EAST", "WEST"] → []
-["NORTH", "WEST", "SOUTH", "EAST"] → ["NORTH", "WEST", "SOUTH", "EAST"]
-["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"] → ["WEST"]
+Input: 'stress' → Output: 't' (only 't' is non-repeating)
+Input: 'sTreSS' → Output: 'T' ('T' is non-repeating, preserving its case)
+Input: 'aabbcc' → Output: "" (all characters are repeated)
 
-Напишите функцию dirReduc, которая принимает массив направлений ("NORTH", "SOUTH", "EAST", "WEST") и упрощает маршрут, удаляя подряд идущие противоположные направления ("NORTH" + "SOUTH" или "EAST" + "WEST").
+Напишите функцию first_non_repeating_letter, которая принимает строку и возвращает первый символ, который нигде в строке не повторяется.
+
+Правила:
+Заглавные и строчные буквы считаются одним и тем же символом, но функция должна возвращать символ в его исходном регистре.
+Если все символы в строке повторяются, вернуть пустую строку ("").
+Функция должна обрабатывать любые символы Юникода.
 
 Примеры:
-["NORTH", "SOUTH", "EAST", "WEST"] → []
-["NORTH", "WEST", "SOUTH", "EAST"] → ["NORTH", "WEST", "SOUTH", "EAST"]
-["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"] → ["WEST"]
+Ввод: 'stress' → Вывод: 't' (только 't' не повторяется)
+Ввод: 'sTreSS' → Вывод: 'T' ('T' не повторяется, сохраняется регистр)
+Ввод: 'aabbcc' → Вывод: "" (все символы повторяются)
 
-https://www.codewars.com/kata/550f22f4d758534c1100025a
+https://www.codewars.com/kata/52bc74d4ac05d0945d00054e
 */
