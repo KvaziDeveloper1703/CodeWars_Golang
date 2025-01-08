@@ -27,9 +27,12 @@ func Accum(given_string string) string {
 	var result []string
 
 	for i, character := range given_string {
-		repeated_string := strings.Repeat(strings.ToLower(string(character)), i+1)
-		transformed_string := strings.ToUpper(string(repeated_string[0])) + repeated_string[1:]
-		result = append(result, transformed_string)
+		charAsString := string(character)
+		charLower := strings.ToLower(charAsString)
+		repeatedString := strings.Repeat(charLower, i+1)
+		firstCharUpper := strings.ToUpper(string(repeatedString[0]))
+		transformedString := firstCharUpper + repeatedString[1:]
+		result = append(result, transformedString)
 	}
 
 	return strings.Join(result, "-")
