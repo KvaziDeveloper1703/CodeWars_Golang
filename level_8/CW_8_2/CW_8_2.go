@@ -10,11 +10,11 @@ package main
 
 import "fmt"
 
-func MakeNegative(x int) int {
-	if x > 0 {
-		return -x
+func MakeNegative(number int) int {
+	if number > 0 {
+		return -number
 	}
-	return x
+	return number
 }
 
 func main() {
