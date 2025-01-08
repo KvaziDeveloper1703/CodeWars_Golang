@@ -24,7 +24,12 @@ import (
 func ToJadenCase(input string) string {
 	words := strings.Fields(input)
 	for i, word := range words {
-		words[i] = strings.ToUpper(string(word[0])) + strings.ToLower(word[1:])
+		firstChar := string(word[0])
+		firstCharUpper := strings.ToUpper(firstChar)
+		restOfWord := word[1:]
+		restOfWordLower := strings.ToLower(restOfWord)
+		capitalizedWord := firstCharUpper + restOfWordLower
+		words[i] = capitalizedWord
 	}
 	return strings.Join(words, " ")
 }
