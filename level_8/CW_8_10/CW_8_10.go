@@ -10,16 +10,16 @@ package main
 
 import "fmt"
 
-func Summation(num int) int {
+func Summation(givenNumber int) int {
 	sum := 0
-	for i := 1; i <= num; i++ {
+	for i := 1; i <= givenNumber; i++ {
 		sum += i
 	}
 	return sum
 }
 
 func main() {
-	fmt.Println(Summation(5))
-	fmt.Println(Summation(10))
-	fmt.Println(Summation(1))
+	number := 5
+	result := Summation(number)
+	fmt.Println(result)
 }

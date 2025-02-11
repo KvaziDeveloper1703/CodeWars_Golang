@@ -10,15 +10,15 @@ package main
 
 import "fmt"
 
-func MakeNegative(number int) int {
-	if number > 0 {
-		return -number
+func MakeNegative(givenNumber int) int {
+	if givenNumber > 0 {
+		return -givenNumber
 	}
-	return number
+	return givenNumber
 }
 
 func main() {
-	fmt.Println(MakeNegative(1))
-	fmt.Println(MakeNegative(-1))
-	fmt.Println(MakeNegative(0))
+	number := 1703
+	result := MakeNegative(number)
+	fmt.Println(result)
 }

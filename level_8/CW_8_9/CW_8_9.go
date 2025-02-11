@@ -13,16 +13,16 @@ import (
 	"strings"
 )
 
-func RepeatString(n int, s string) string {
-	if n <= 0 {
+func RepeatString(N int, givenString string) string {
+	if N <= 0 {
 		return ""
 	}
-	return strings.Repeat(s, n)
+	return strings.Repeat(givenString, N)
 }
 
 func main() {
-	fmt.Println(RepeatString(6, "I"))
-	fmt.Println(RepeatString(5, "Hello"))
-	fmt.Println(RepeatString(0, "Test"))
-	fmt.Println(RepeatString(-3, "Oops"))
+	N := 5
+	word := "Hello"
+	result := RepeatString(N, word)
+	fmt.Println(result)
 }

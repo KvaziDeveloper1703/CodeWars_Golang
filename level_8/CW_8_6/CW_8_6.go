@@ -10,7 +10,7 @@ package main
 
 import "fmt"
 
-func BoolToWord(value bool) string {
+func BoolToString(value bool) string {
 	if value {
 		return "Yes"
 	}
@@ -18,6 +18,7 @@ func BoolToWord(value bool) string {
 }
 
 func main() {
-	fmt.Println(BoolToWord(true))
-	fmt.Println(BoolToWord(false))
+	boolValue := true
+	stringValue := BoolToString(boolValue)
+	fmt.Println(stringValue)
 }

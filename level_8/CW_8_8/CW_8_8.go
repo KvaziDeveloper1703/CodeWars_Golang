@@ -10,16 +10,15 @@ package main
 
 import "fmt"
 
-func RemoveFirstAndLast(word string) string {
-	if len(word) <= 2 {
+func RemoveFirstAndLast(givenWord string) string {
+	if len(givenWord) <= 2 {
 		return ""
 	}
-	return word[1 : len(word)-1]
+	return givenWord[1 : len(givenWord)-1]
 }
 
 func main() {
-	fmt.Println(RemoveFirstAndLast("hello"))
-	fmt.Println(RemoveFirstAndLast("world"))
-	fmt.Println(RemoveFirstAndLast("ab"))
-	fmt.Println(RemoveFirstAndLast("a"))
+	word := "word"
+	result := RemoveFirstAndLast(word)
+	fmt.Println(result)
 }

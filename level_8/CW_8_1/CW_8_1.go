@@ -10,8 +10,8 @@ package main
 
 import "fmt"
 
-func EvenOrOdd(number int) string {
-	if number%2 == 0 {
+func EvenOrOdd(givenNumber int) string {
+	if givenNumber%2 == 0 {
 		return "Even"
 	}
 	return "Odd"
