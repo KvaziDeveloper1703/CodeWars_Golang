@@ -4,14 +4,12 @@ Write a function that transforms a string by repeating each character based on i
 Examples:
 accum("abcd") → "A-Bb-Ccc-Dddd"
 accum("RqaEzty") → "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
-accum("cwAt") → "C-Ww-Aaa-Tttt"
 
 Напишите функцию, которая преобразует строку, повторяя каждый символ столько раз, сколько соответствует его позиции в строке. Первая буква в повторении должна быть заглавной, а остальные — строчными. Преобразованные символы должны быть соединены дефисами. Входная строка будет содержать только буквы от a до z и от A до Z.
 
 Примеры:
 accum("abcd") → "A-Bb-Ccc-Dddd"
 accum("RqaEzty") → "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
-accum("cwAt") → "C-Ww-Aaa-Tttt"
 
 https://www.codewars.com/kata/5667e8f4e3f572a8f2000039
 */
@@ -23,15 +21,15 @@ import (
 	"strings"
 )
 
-func Accum(given_string string) string {
+func Accum(givenString string) string {
 	var result []string
 
-	for i, character := range given_string {
-		charAsString := string(character)
-		charLower := strings.ToLower(charAsString)
-		repeatedString := strings.Repeat(charLower, i+1)
-		firstCharUpper := strings.ToUpper(string(repeatedString[0]))
-		transformedString := firstCharUpper + repeatedString[1:]
+	for i, character := range givenString {
+		characterAsAString := string(character)
+		lowerCharacter := strings.ToLower(characterAsAString)
+		repeatedString := strings.Repeat(lowerCharacter, i+1)
+		firstUpperCharacter := strings.ToUpper(string(repeatedString[0]))
+		transformedString := firstUpperCharacter + repeatedString[1:]
 		result = append(result, transformedString)
 	}
 
@@ -39,7 +37,7 @@ func Accum(given_string string) string {
 }
 
 func main() {
-	fmt.Println(Accum("abcd"))
-	fmt.Println(Accum("RqaEzty"))
-	fmt.Println(Accum("cwAt"))
+	myString := "RqaEzty"
+	result := Accum(myString)
+	fmt.Println(result)
 }

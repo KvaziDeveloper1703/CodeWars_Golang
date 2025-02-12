@@ -21,21 +21,21 @@ import (
 	"strings"
 )
 
-func ToJadenCase(input string) string {
-	words := strings.Fields(input)
+func ToJadenCase(givenString string) string {
+	words := strings.Fields(givenString)
 	for i, word := range words {
-		firstChar := string(word[0])
-		firstCharUpper := strings.ToUpper(firstChar)
-		restOfWord := word[1:]
-		restOfWordLower := strings.ToLower(restOfWord)
-		capitalizedWord := firstCharUpper + restOfWordLower
+		firstCharacter := string(word[0])
+		firstUpperCharacter := strings.ToUpper(firstCharacter)
+		restOfTheWord := word[1:]
+		restOfTheWordLower := strings.ToLower(restOfTheWord)
+		capitalizedWord := firstUpperCharacter + restOfTheWordLower
 		words[i] = capitalizedWord
 	}
 	return strings.Join(words, " ")
 }
 
 func main() {
-	input := "How can mirrors be real if our eyes aren't real"
-	output := ToJadenCase(input)
-	fmt.Println(output)
+	myString := "How can mirrors be real if our eyes aren't real"
+	result := ToJadenCase(myString)
+	fmt.Println(result)
 }

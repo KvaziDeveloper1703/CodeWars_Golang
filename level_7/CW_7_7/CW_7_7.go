@@ -13,8 +13,8 @@ import (
 	"strings"
 )
 
-func FindShortestWordLength(input string) int {
-	words := strings.Fields(input)
+func FindShortestWordLength(givenString string) int {
+	words := strings.Fields(givenString)
 
 	if len(words) == 0 {
 		return 0
@@ -33,8 +33,7 @@ func FindShortestWordLength(input string) int {
 }
 
 func main() {
-	fmt.Println(FindShortestWordLength("The quick brown fox"))
-	fmt.Println(FindShortestWordLength("Go is awesome"))
-	fmt.Println(FindShortestWordLength("Single"))
-	fmt.Println(FindShortestWordLength("This is a test"))
+	myString := "The quick brown fox"
+	result := FindShortestWordLength(myString)
+	fmt.Println(result)
 }

@@ -10,13 +10,13 @@ package main
 
 import "fmt"
 
-func countVowels(input string) (count int) {
+func countVowels(givenString string) (count int) {
 	vowels := "aeiouy"
 	count = 0
 
-	for _, char := range input {
+	for _, character := range givenString {
 		for _, vowel := range vowels {
-			if char == vowel {
+			if character == vowel {
 				count++
 				break
 			}
@@ -27,7 +27,7 @@ func countVowels(input string) (count int) {
 }
 
 func main() {
-	input := "This is a test string!"
-	result := countVowels(input)
+	myString := "This is a test string!"
+	result := countVowels(myString)
 	fmt.Printf("Number of vowels in the string: %d\n", result)
 }

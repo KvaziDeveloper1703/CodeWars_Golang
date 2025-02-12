@@ -13,10 +13,10 @@ import (
 	"strings"
 )
 
-func GetComplementaryDNA(dna string) string {
+func GetComplementaryDNA(givenDNA string) string {
 	var complement strings.Builder
 
-	for _, nucleotide := range dna {
+	for _, nucleotide := range givenDNA {
 		switch nucleotide {
 		case 'A':
 			complement.WriteRune('T')
@@ -35,7 +35,7 @@ func GetComplementaryDNA(dna string) string {
 }
 
 func main() {
-	fmt.Println(GetComplementaryDNA("ATCG"))
-	fmt.Println(GetComplementaryDNA("GATTACA"))
-	fmt.Println(GetComplementaryDNA("CGCG"))
+	dna := "GATTACA"
+	result := GetComplementaryDNA(dna)
+	fmt.Println(result)
 }

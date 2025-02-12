@@ -1,35 +1,25 @@
 /*
-Write a function that takes two strings, s1 and s2, containing only lowercase letters from a to z. The function should return a new string that:
+Write a function that takes two strings, string1 and string2, containing only lowercase letters from a to z. The function should return a new string that:
 + Is sorted in alphabetical order.
 + Contains the longest possible combination of distinct letters, each appearing only once.
-+ Includes letters from both s1 and s2.
++ Includes letters from both string1 and string2.
 
 Examples:
 Input:
-a = "xyaabbbccccdefww"
-b = "xxxxyyyyabklmopq"
+string1 = "xyaabbbccccdefww"
+string2 = "xxxxyyyyabklmopq"
 Output: "abcdefklmopqwxy"
 
-Input:
-a = "abcdefghijklmnopqrstuvwxyz"
-b = "abcdefghijklmnopqrstuvwxyz"
-Output: "abcdefghijklmnopqrstuvwxyz"
-
-Напишите функцию, которая принимает две строки s1 и s2, содержащие только строчные буквы от a до z. Функция должна вернуть новую строку, которая:
+Напишите функцию, которая принимает две строки string1 и string2, содержащие только строчные буквы от a до z. Функция должна вернуть новую строку, которая:
 + Отсортирована в алфавитном порядке.
 + Содержит максимально возможное количество различных букв, каждая из которых встречается только один раз.
-+ Включает буквы из обеих строк s1 и s2.
++ Включает буквы из обеих строк string1 и string2.
 
-Примеры:
+Пример:
 Ввод:
-a = "xyaabbbccccdefww"
-b = "xxxxyyyyabklmopq"
+string1 = "xyaabbbccccdefww"
+string2 = "xxxxyyyyabklmopq"
 Вывод: "abcdefklmopqwxy"
-
-Ввод:
-a = "abcdefghijklmnopqrstuvwxyz"
-b = "abcdefghijklmnopqrstuvwxyz"
-Вывод: "abcdefghijklmnopqrstuvwxyz"
 
 https://www.codewars.com/kata/5656b6906de340bd1b0000ac
 */
@@ -61,11 +51,8 @@ func LongestDistinctCombination(givenString1, givenString2 string) string {
 }
 
 func main() {
-	s1 := "xyaabbbccccdefww"
-	s2 := "xxxxyyyyabklmopq"
-	fmt.Println(LongestDistinctCombination(s1, s2))
-
-	s1 = "hello"
-	s2 = "world"
-	fmt.Println(LongestDistinctCombination(s1, s2))
+	string1 := "xyaabbbccccdefww"
+	string2 := "xxxxyyyyabklmopq"
+	result := LongestDistinctCombination(string1, string2)
+	fmt.Println(result)
 }
